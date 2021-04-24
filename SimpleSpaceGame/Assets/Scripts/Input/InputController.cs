@@ -38,6 +38,7 @@ public class InputController : MonoBehaviour
     {
         controls.Gameplay.Enable();
         controls.Gameplay.Move.performed += OnMovePerformed;
+        controls.Gameplay.Move.canceled += OnMovePerformed;
         
     }
 
@@ -46,7 +47,7 @@ public class InputController : MonoBehaviour
         Vector2 moveInput = context.ReadValue<Vector2>();
      //still unity events
         moveInputEvent.Invoke(moveInput.x, moveInput.y);
-        Debug.Log($"Move Input:  {moveInput}");
+        //Debug.Log($"Move Input:  {moveInput}");
     }
 
     private void OnDisable()

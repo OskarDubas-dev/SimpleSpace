@@ -1,5 +1,5 @@
 {
-    "name": "InputController",
+    "name": "Controls",
     "maps": [
         {
             "name": "Gameplay",
@@ -96,6 +96,11 @@
                 },
                 {
                     "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XInputController>",
                     "isOptional": false,
                     "isOR": false
                 }
