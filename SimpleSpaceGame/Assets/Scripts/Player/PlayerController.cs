@@ -34,4 +34,9 @@ public class PlayerController : MonoBehaviour
         Debug.Log($"Player Controller: Move Input : {horizontal} and {vertical}");
     }
 
+    public void onShootInput()
+    {
+        Debug.Log("player pow");
+    }
+
 }

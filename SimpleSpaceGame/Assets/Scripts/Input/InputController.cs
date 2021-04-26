@@ -15,6 +15,8 @@ public class InputController : MonoBehaviour
 
     public Controls controls;
     public MoveInputEvent moveInputEvent;
+    
+
 
 
     private void Awake()
@@ -39,7 +41,15 @@ public class InputController : MonoBehaviour
         controls.Gameplay.Enable();
         controls.Gameplay.Move.performed += OnMovePerformed;
         controls.Gameplay.Move.canceled += OnMovePerformed;
+
+        controls.Gameplay.Shoot.performed += Shoot_performed;
         
+    }
+
+    private void Shoot_performed(InputAction.CallbackContext context)
+    {
+       
+        Debug.Log("pow");
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -49,6 +59,9 @@ public class InputController : MonoBehaviour
         moveInputEvent.Invoke(moveInput.x, moveInput.y);
         //Debug.Log($"Move Input:  {moveInput}");
     }
+
+
+    
 
     private void OnDisable()
     {
