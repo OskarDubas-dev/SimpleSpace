@@ -18,9 +18,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        //player movement (only horizontal for now)
         Vector3 moveDirection = Vector3.right * horizontal;
         transform.position += moveDirection * moveSpeed * Time.deltaTime;
 
+        //beginning of the vertical movement (probably not what we want)
        // Vector2 moveDirection = Vector2.up * vertical + Vector2.right * horizontal;
         //transform.position += moveDirection * moveSpeed * Time.deltaTime;
 
@@ -31,12 +33,12 @@ public class PlayerController : MonoBehaviour
     {
         this.horizontal = horizontal;
         this.vertical = vertical;
-        Debug.Log($"Player Controller: Move Input : {horizontal} and {vertical}");
+        //Debug.Log($"Player Controller: Move Input : {horizontal} and {vertical}");
     }
 
     public void onShootInput()
     {
-        Debug.Log("player pow");
+        //Debug.Log("player pow");
     }
 
 }

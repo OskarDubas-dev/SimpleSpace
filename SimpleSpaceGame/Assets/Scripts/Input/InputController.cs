@@ -3,18 +3,23 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-
+//Unity Events: https://www.youtube.com/watch?v=oc3sQamIh-Q
+//Unity Input Sys: https://www.youtube.com/watch?v=kGykP7VZCvg&t=1781s
+//                  https://www.youtube.com/watch?v=dyyjhwyX20M
 
 
 //ok so this is unity event I have no idea about <REASERCH!!!> <TODO>
 [Serializable]
 public class MoveInputEvent : UnityEvent<float,float> { }
+[Serializable]
+public class ShootEvent : UnityEvent { }
 
 public class InputController : MonoBehaviour
 {
 
     public Controls controls;
     public MoveInputEvent moveInputEvent;
+    public ShootEvent shootEvent;
     
 
 
@@ -30,11 +35,6 @@ public class InputController : MonoBehaviour
         
     }
 
-    private void Move()
-    {
-
-        Debug.Log("lefty");
-    }
 
     private void OnEnable()
     {
@@ -48,8 +48,7 @@ public class InputController : MonoBehaviour
 
     private void Shoot_performed(InputAction.CallbackContext context)
     {
-       
-        Debug.Log("pow");
+        shootEvent.Invoke();
     }
 
     private void OnMovePerformed(InputAction.CallbackContext context)
@@ -57,7 +56,6 @@ public class InputController : MonoBehaviour
         Vector2 moveInput = context.ReadValue<Vector2>();
      //still unity events
         moveInputEvent.Invoke(moveInput.x, moveInput.y);
-        //Debug.Log($"Move Input:  {moveInput}");
     }
 
 
