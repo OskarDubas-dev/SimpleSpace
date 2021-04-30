@@ -8,11 +8,9 @@ using UnityEngine.InputSystem;
 //                  https://www.youtube.com/watch?v=dyyjhwyX20M
 
 
-//ok so this is unity event I have no idea about <REASERCH!!!> <TODO>
-[Serializable]
-public class MoveInputEvent : UnityEvent<float,float> { }
-[Serializable]
-public class ShootEvent : UnityEvent { }
+
+[Serializable] public class MoveInputEvent : UnityEvent<float,float> { }
+[Serializable] public class ShootEvent : UnityEvent { }
 
 public class InputController : MonoBehaviour
 {
@@ -54,7 +52,6 @@ public class InputController : MonoBehaviour
     private void OnMovePerformed(InputAction.CallbackContext context)
     {
         Vector2 moveInput = context.ReadValue<Vector2>();
-     //still unity events
         moveInputEvent.Invoke(moveInput.x, moveInput.y);
     }
 
