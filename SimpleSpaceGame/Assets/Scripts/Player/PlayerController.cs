@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 8;
+    [SerializeField] GameObject bulletPrefab;
 
     float horizontal, vertical;
 
@@ -69,7 +70,7 @@ public class PlayerController : MonoBehaviour
 
     public void onShootInput()
     {
-        //Debug.Log("player pow");
+        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
     }
 
 }
