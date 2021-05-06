@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] float moveSpeed = 8;
+    [SerializeField] float moveSpeed = 6;
     [SerializeField] GameObject bulletPrefab;
 
     float horizontal, vertical;

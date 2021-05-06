@@ -5,8 +5,8 @@ using UnityEngine;
 public class bulletConfiguration : MonoBehaviour
 {
 
-    [SerializeField] float projectileSpeed = 0.5f;
-    float rotationSpeed = 10f;
+    [SerializeField] float projectileSpeed = 9f;
+    float rotationSpeed = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,6 @@ public class bulletConfiguration : MonoBehaviour
     void Update()
     {
 
-        
+        transform.Rotate(0, 0, rotationSpeed);
     }
 }
