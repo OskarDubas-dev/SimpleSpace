@@ -18,6 +18,7 @@ public class InputController : MonoBehaviour
     public Controls controls;
     public MoveInputEvent moveInputEvent;
     public ShootEvent shootEvent;
+    private bool fireDown;
     
 
 
@@ -30,7 +31,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        
+        if(fireDown) shootEvent.Invoke();
     }
 
 
@@ -40,26 +41,40 @@ public class InputController : MonoBehaviour
         controls.Gameplay.Move.performed += OnMovePerformed;
         controls.Gameplay.Move.canceled += OnMovePerformed;
 
-        controls.Gameplay.Shoot.performed += Shoot_performed;
+        controls.Gameplay.Shoot.performed += onShootPerformed;
+        controls.Gameplay.Shoot.canceled += onShootCanceled;
         
     }
 
-    private void Shoot_performed(InputAction.CallbackContext context)
+    private void OnDisable()
     {
-        shootEvent.Invoke();
+        controls.Gameplay.Disable();
+        controls.Gameplay.Move.performed -= OnMovePerformed;
+        controls.Gameplay.Move.canceled -= OnMovePerformed;
+
+        controls.Gameplay.Shoot.performed -= onShootPerformed;
+        controls.Gameplay.Shoot.canceled -= onShootCanceled;
     }
+
+
 
     private void OnMovePerformed(InputAction.CallbackContext context)
     {
         Vector2 moveInput = context.ReadValue<Vector2>();
         moveInputEvent.Invoke(moveInput.x, moveInput.y);
     }
+    private void onShootPerformed(InputAction.CallbackContext context)
+    {
+        fireDown = true;
+    }
 
-
+    private void onShootCanceled(InputAction.CallbackContext context)
+    {
+        fireDown = false;
+    }
+    
+    
     
 
-    private void OnDisable()
-    {
-        controls.Gameplay.Disable();
-    }
+ 
 }
