@@ -12,13 +12,17 @@ using UnityEngine.InputSystem;
 [Serializable] public class MoveInputEvent : UnityEvent<float,float> { }
 [Serializable] public class ShootEvent : UnityEvent { }
 
+[Serializable] public class ShootStopEvent : UnityEvent { }
+
+
 public class InputController : MonoBehaviour
 {
 
     public Controls controls;
     public MoveInputEvent moveInputEvent;
     public ShootEvent shootEvent;
-    private bool fireDown;
+    public ShootStopEvent shootStopEvent;
+  
     
 
 
@@ -31,7 +35,7 @@ public class InputController : MonoBehaviour
 
     void Update()
     {
-        if(fireDown) shootEvent.Invoke();
+       
     }
 
 
@@ -65,12 +69,12 @@ public class InputController : MonoBehaviour
     }
     private void onShootPerformed(InputAction.CallbackContext context)
     {
-        fireDown = true;
+        shootEvent.Invoke();
     }
 
     private void onShootCanceled(InputAction.CallbackContext context)
     {
-        fireDown = false;
+        shootStopEvent.Invoke();
     }
     
     

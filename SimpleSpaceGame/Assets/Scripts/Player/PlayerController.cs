@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer playerSprite;
     float maxMovementVerical = 0.9f;
 
-    [SerializeField] float fireRate = 5.5f;
+    [SerializeField] float fireRate = 0.1f;
 
 
     private void Start()
@@ -72,17 +72,27 @@ public class PlayerController : MonoBehaviour
 
     public void onShootInput()
     {
-       // StartCoroutine(shootingContinuously());
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
+        StartCoroutine("shootingContinuously");
+        //GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
 
 
+    }
+
+    public void onStopShooting()
+    {
+        //GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
+
+        StopCoroutine("shootingContinuously");
     }
     IEnumerator shootingContinuously()
     {
 
-        yield return new WaitForSeconds(fireRate);
-        GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
-        
+        while (true)
+        {
+           
+            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
+            yield return new WaitForSeconds(fireRate);
+        }
     }
 
 
