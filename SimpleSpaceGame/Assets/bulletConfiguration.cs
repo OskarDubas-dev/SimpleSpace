@@ -19,10 +19,15 @@ public class bulletConfiguration : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
-        StartCoroutine(deleteItself());
+        //StartCoroutine(deleteItself());
+
         
     }
 
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
     // Update is called once per frame
     void Update()
     {
