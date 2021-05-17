@@ -13,12 +13,13 @@ public class enemySpawner : MonoBehaviour
         StartCoroutine(spawnAllEnemiesInWave(currentWave));
     }
 
-    private IEnumerator spawnAllEnemiesInWave(waveConfiguration waveConfig)
+    private IEnumerator spawnAllEnemiesInWave(waveConfiguration waveConfig) //set waveConfig to enemy and start spawning them
     {
         int counter = 0;
         while (counter != waveConfig.numberOfEnemies)
         {
             GameObject enemy = Instantiate(waveConfig.enemyPrefab, waveConfig.GetWaypoints()[0].transform.position, Quaternion.identity) as GameObject;
+            enemy.GetComponent<enemyPathing>().setWaveConfig(waveConfig);
             yield return new WaitForSeconds(waveConfig.timeBetweenSpawns);
             counter++;
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemyPathing : MonoBehaviour
 {
     //[SerializeField] GameObject path;
-    [SerializeField] waveConfiguration waveConfig; //scriptable object of wave configuration 
+    waveConfiguration waveConfig; //scriptable object of wave configuration 
     List<Transform> waypoints;
     float moveSpeed;
     int waypointIndex = 0;
@@ -21,10 +21,16 @@ public class enemyPathing : MonoBehaviour
     private void FixedUpdate()
     {
         move();
+
         if (transform.position == waypoints[waypoints.Count - 1].position) //if enemy is on last waypoint destroy itself
         {
             destroyItself();
         }
+    }
+
+    public void setWaveConfig(waveConfiguration waveConfig)
+    {
+        this.waveConfig = waveConfig;
     }
 
     private void move() //move enemy from 1st waypoint to the last waypoint in given path object (from wave config)

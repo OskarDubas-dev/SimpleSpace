@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
+  - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
   - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
 --- !u!4 &107402145
 Transform:
