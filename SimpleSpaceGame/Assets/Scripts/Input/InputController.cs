@@ -23,9 +23,7 @@ public class InputController : MonoBehaviour
     public ShootEvent shootEvent;
     public ShootStopEvent shootStopEvent;
   
-    
-
-
+   
 
     private void Awake()
     {
@@ -37,7 +35,6 @@ public class InputController : MonoBehaviour
     {
        
     }
-
 
     private void OnEnable()
     {
@@ -77,8 +74,5 @@ public class InputController : MonoBehaviour
         shootStopEvent.Invoke();
     }
     
-    
-    
-
  
 }

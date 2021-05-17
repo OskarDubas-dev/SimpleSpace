@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Player class:
+//- Controlles ship movement and speed
+//- Prevents from going out of bounds
+//- Instantiates bullet objects
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 6;
@@ -22,8 +26,7 @@ public class PlayerController : MonoBehaviour
     {
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         SetUpMoveBoundries();
-       
-      
+             
     }
 
 
@@ -49,10 +52,6 @@ public class PlayerController : MonoBehaviour
     private void SetUpMoveBoundries()
     {
         mainCamera = Camera.main;
-        //xMin = mainCamera.ViewportToWorldPoint(new Vector3 (0, 0, 0)).x;
-        //xMax = mainCamera.ViewportToWorldPoint(new Vector3 (1, 0, 0)).x;
-        //yMin = mainCamera.ViewportToWorldPoint(new Vector3 (0, 0, 0)).y;
-        //yMax = mainCamera.ViewportToWorldPoint(new Vector3 (0, 1, 0)).y;
 
         xMin = mainCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + playerSprite.bounds.extents.x;
         xMax = mainCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - playerSprite.bounds.extents.x;
@@ -64,18 +63,13 @@ public class PlayerController : MonoBehaviour
     //Called as Unity event fire in (GameManager object)
     public void onMoveInput(float horizontal, float vertical)
     {
-
         this.horizontal = horizontal;
         this.vertical = vertical;
-        //Debug.Log($"Player Controller: Move Input : {horizontal} and {vertical}");
     }
 
     public void onShootInput()
     {
         StartCoroutine("shootingContinuously");
-        //GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
-
-
     }
 
     public void onStopShooting()
@@ -86,10 +80,8 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator shootingContinuously()
     {
-
         while (true)
         {
-           
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
             yield return new WaitForSeconds(fireRate);
         }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: wave_A
   m_EditorClassIdentifier: 
   <enemyPrefab>k__BackingField: {fileID: 6134796338867520013, guid: 30be7c750315b2642bc4a859677fb1f7, type: 3}
-  <pathPrefab>k__BackingField: {fileID: 0}
+  <pathPrefab>k__BackingField: {fileID: 2603874472600599022, guid: 39be12bee65856f40a3c8148f8cfa3f9, type: 3}
   <timeBetweenSpawns>k__BackingField: 0.5
   <numberOfEnemies>k__BackingField: 5
   <moveSpeed>k__BackingField: 2

@@ -4,34 +4,30 @@ using UnityEngine;
 
 public class enemyPathing : MonoBehaviour
 {
-    [SerializeField] GameObject path;
+    //[SerializeField] GameObject path;
+    [SerializeField] waveConfiguration waveConfig; //scriptable object of wave configuration 
     List<Transform> waypoints;
-    float moveSpeed = 2.0f;
+    float moveSpeed;
     int waypointIndex = 0;
 
     private void Start()
     {
-        waypoints = new List<Transform>();
-        foreach(Transform waypoint in path.transform)
-        {
-            waypoints.Add(waypoint.transform);
-           
-        }
+        //picks all children from path prefab
+        waypoints = waveConfig.GetWaypoints();
+        moveSpeed = waveConfig.moveSpeed;
 
-        foreach(var waypoint in waypoints)
-        {
-            Debug.Log(waypoint.transform);
-        }
-
-        
     }
 
     private void FixedUpdate()
     {
         move();
+        if (transform.position == waypoints[waypoints.Count - 1].position) //if enemy is on last waypoint destroy itself
+        {
+            destroyItself();
+        }
     }
 
-    private void move()
+    private void move() //move enemy from 1st waypoint to the last waypoint in given path object (from wave config)
     {
        if(waypointIndex <= waypoints.Count -1)
         { 
@@ -44,7 +40,14 @@ public class enemyPathing : MonoBehaviour
 
 
         }
+     
     }
+
+    private void destroyItself()
+    {
+        Destroy(gameObject);
+    }
+
 
 
 }

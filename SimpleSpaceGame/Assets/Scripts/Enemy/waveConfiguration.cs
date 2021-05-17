@@ -11,5 +11,16 @@ public class waveConfiguration : ScriptableObject
     [field: SerializeField] public int numberOfEnemies { get; private set; } = 5;
     [field: SerializeField] public float moveSpeed { get; private set; } = 2f;
 
+    public List<Transform> GetWaypoints()
+    {
+        var waypoints = new List<Transform>();
+        foreach (Transform waypoint in pathPrefab.transform)
+        {
+            waypoints.Add(waypoint.transform);
+
+        }
+
+        return waypoints;
+    }
 
 }
