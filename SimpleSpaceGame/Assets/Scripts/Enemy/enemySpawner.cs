@@ -6,11 +6,24 @@ using UnityEngine;
 public class enemySpawner : MonoBehaviour
 {
     [SerializeField] List<waveConfiguration> waveConfigs;
-    int startingWave = 0;
+    [SerializeField] int startingWave = 0;
+    [SerializeField] int timeBetweenWaves;
     private void Start()
     {
         var currentWave = waveConfigs[startingWave];
-        StartCoroutine(spawnAllEnemiesInWave(currentWave));
+        //StartCoroutine(spawnAllEnemiesInWave(currentWave));
+        StartCoroutine(spawnAllWaves());
+    }
+
+
+    private IEnumerator spawnAllWaves()
+    {
+        
+        for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+        {
+            var currentWave = waveConfigs[waveIndex];
+            yield return StartCoroutine(spawnAllEnemiesInWave(currentWave));
+        }
     }
 
     private IEnumerator spawnAllEnemiesInWave(waveConfiguration waveConfig) //set waveConfig to enemy and start spawning them
@@ -23,5 +36,6 @@ public class enemySpawner : MonoBehaviour
             yield return new WaitForSeconds(waveConfig.timeBetweenSpawns);
             counter++;
         }
+        yield return new WaitForSeconds(timeBetweenWaves);
     }
 }
