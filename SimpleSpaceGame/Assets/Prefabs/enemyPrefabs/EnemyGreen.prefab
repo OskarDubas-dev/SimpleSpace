@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 163947808444484031}
   - component: {fileID: 6147145173990860205}
   - component: {fileID: 1630554352098021273}
+  - component: {fileID: -2158175808874703945}
   m_Layer: 0
   m_Name: EnemyGreen
   m_TagString: Untagged
@@ -171,7 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d69ba40a45f2e1747b66990c8183d271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
+  deathSound: {fileID: 8300000, guid: e5b343a57066ca6419e16a81beef9cca, type: 3}
 --- !u!70 &1630554352098021273
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -188,3 +190,16 @@ CapsuleCollider2D:
   m_Offset: {x: 0.0011386275, y: -0.026663303}
   m_Size: {x: 0.35654485, y: 0.3656535}
   m_Direction: 0
+--- !u!114 &-2158175808874703945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cd4276ca7ad8842acd84fff90073a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1

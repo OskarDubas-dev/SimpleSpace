@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 8970524165812998103}
   - component: {fileID: 8970524165812998104}
   - component: {fileID: 7611989421812527408}
-  - component: {fileID: 8399295248943956213}
   - component: {fileID: 4906639078348269384}
+  - component: {fileID: 9175360524955788629}
+  - component: {fileID: 4397131382732073753}
   m_Layer: 10
   m_Name: bulletPlayer
   m_TagString: Untagged
@@ -98,7 +99,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 9
---- !u!50 &8399295248943956213
+  standardFireSound: {fileID: 8300000, guid: 9538298121f3d714f89799ee4ee74e01, type: 3}
+--- !u!114 &4906639078348269384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970524165812998105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cd4276ca7ad8842acd84fff90073a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+--- !u!58 &9175360524955788629
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8970524165812998105}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000014901161, y: -0.0022769794}
+  serializedVersion: 2
+  m_Radius: 0.055860743
+--- !u!50 &4397131382732073753
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -119,16 +150,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4906639078348269384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8970524165812998105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5cd4276ca7ad8842acd84fff90073a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1

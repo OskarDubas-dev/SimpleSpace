@@ -7,6 +7,9 @@ public class damageTaker : MonoBehaviour
 {
     [SerializeField] int health = 1;
 
+    [SerializeField] private AudioClip deathSound;
+    private float deathSoundVolume = 0.1f;
+
 
     private void Update()
     {
@@ -16,6 +19,7 @@ public class damageTaker : MonoBehaviour
 
     private void destroyItself()
     {
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         Destroy(gameObject);
     }
 

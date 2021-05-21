@@ -16,6 +16,9 @@ public class bulletConfiguration : MonoBehaviour
 
     GameObject bullet;
 
+    [SerializeField] private AudioClip standardFireSound;
+    private float standardFireSoundVolume = 0.8f;
+
     private void Awake()
     {
         bullet = this.gameObject;
@@ -25,6 +28,7 @@ public class bulletConfiguration : MonoBehaviour
     {
         GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
         //StartCoroutine(deleteItself());
+        AudioSource.PlayClipAtPoint(standardFireSound, Camera.main.transform.position, standardFireSoundVolume);
     }
 
   

@@ -124,6 +124,8 @@ GameObject:
   - component: {fileID: 7960496077437939057}
   - component: {fileID: 163947808444484031}
   - component: {fileID: 4617050181975351297}
+  - component: {fileID: 7783805895240045109}
+  - component: {fileID: -5264668442058877219}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Untagged
@@ -168,9 +170,36 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.0011384487, y: -0.0107239485}
   m_Size: {x: 0.14705515, y: 0.41119456}
   m_Direction: 0
+--- !u!114 &7783805895240045109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d69ba40a45f2e1747b66990c8183d271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  deathSound: {fileID: 8300000, guid: e5b343a57066ca6419e16a81beef9cca, type: 3}
+--- !u!114 &-5264668442058877219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5cd4276ca7ad8842acd84fff90073a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
