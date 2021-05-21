@@ -123,8 +123,9 @@ GameObject:
   m_Component:
   - component: {fileID: 7960496077437939057}
   - component: {fileID: 163947808444484031}
+  - component: {fileID: 4617050181975351297}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyRed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,4 +158,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f586ef948e55f5479f33e93773e593f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfig: {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
+--- !u!70 &4617050181975351297
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0011384487, y: -0.0107239485}
+  m_Size: {x: 0.14705515, y: 0.41119456}
+  m_Direction: 0
