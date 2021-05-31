@@ -7,7 +7,7 @@ public class enemySpawner : MonoBehaviour
 {
     [SerializeField] List<waveConfiguration> waveConfigs;
     [SerializeField] int startingWave = 0;
-    [SerializeField] int timeBetweenWaves;
+    [SerializeField] public int timeBetweenWaves;
     private void Start()
     {
         var currentWave = waveConfigs[startingWave];

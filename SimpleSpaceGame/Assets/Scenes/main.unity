@@ -155,8 +155,19 @@ MonoBehaviour:
   waveConfigs:
   - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
   - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
+  - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
+  - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
+  - {fileID: 11400000, guid: 3fb31588d1258174b80895e61924dc66, type: 2}
+  - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
+  - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
+  - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
+  - {fileID: 11400000, guid: c21275af3357c424ab2cb3f7c47178ce, type: 2}
+  - {fileID: 11400000, guid: 3fb31588d1258174b80895e61924dc66, type: 2}
+  - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
+  - {fileID: 11400000, guid: c21275af3357c424ab2cb3f7c47178ce, type: 2}
+  - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
   startingWave: 0
-  timeBetweenWaves: 2
+  timeBetweenWaves: 1
 --- !u!4 &107402145
 Transform:
   m_ObjectHideFlags: 0

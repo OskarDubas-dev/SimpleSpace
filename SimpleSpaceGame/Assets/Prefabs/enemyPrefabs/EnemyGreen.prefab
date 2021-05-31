@@ -124,11 +124,12 @@ GameObject:
   - component: {fileID: 7960496077437939057}
   - component: {fileID: 163947808444484031}
   - component: {fileID: 6147145173990860205}
-  - component: {fileID: 1630554352098021273}
   - component: {fileID: -2158175808874703945}
+  - component: {fileID: 6858579199967019260}
+  - component: {fileID: -2862446691423696370}
   m_Layer: 0
   m_Name: EnemyGreen
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -174,22 +175,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   deathSound: {fileID: 8300000, guid: e5b343a57066ca6419e16a81beef9cca, type: 3}
---- !u!70 &1630554352098021273
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6134796338867520013}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.0011386275, y: -0.026663303}
-  m_Size: {x: 0.35654485, y: 0.3656535}
-  m_Direction: 0
 --- !u!114 &-2158175808874703945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,3 +188,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+--- !u!114 &6858579199967019260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 582572dfdec5aee439d4e22cbbe02961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenShots: 1
+  bulletPrefab: {fileID: 8970524165812998105, guid: 8dee5d7a3bf4daa40b55992a40f9c247, type: 3}
+--- !u!58 &-2862446691423696370
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.021632195}
+  serializedVersion: 2
+  m_Radius: 0.2210598

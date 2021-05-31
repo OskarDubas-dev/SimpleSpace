@@ -27,7 +27,13 @@ public class damageTaker : MonoBehaviour
     {
         damageDealer _damageDealer = collision.gameObject.GetComponent<damageDealer>();
 
-        health -= _damageDealer.Damage();
+        if (((_damageDealer.tag == "fromEnemy") || (_damageDealer.tag == "Enemy")) && gameObject.tag == "Player")
+        { health -= _damageDealer.Damage(); }
+
+        if (_damageDealer.tag == "fromPlayer" && gameObject.tag == "Enemy")
+        { health -= _damageDealer.Damage(); }
+     
+       
     }
 
 

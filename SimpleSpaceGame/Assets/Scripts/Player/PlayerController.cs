@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
         while (true)
         {
             GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation) as GameObject;
+            bullet.tag = "fromPlayer";
             yield return new WaitForSeconds(fireRate);
         }
     }
