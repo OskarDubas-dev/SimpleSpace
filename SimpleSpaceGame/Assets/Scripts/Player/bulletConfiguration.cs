@@ -17,7 +17,7 @@ public class bulletConfiguration : MonoBehaviour
     GameObject bullet;
 
     [SerializeField] private AudioClip standardFireSound;
-    private float standardFireSoundVolume = 0.8f;
+    private float standardFireSoundVolume = 0.1f;
 
     private void Awake()
     {

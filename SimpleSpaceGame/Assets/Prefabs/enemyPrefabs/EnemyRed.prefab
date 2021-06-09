@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: -5264668442058877219}
   - component: {fileID: -2490377389496866110}
   - component: {fileID: -5776684231120977711}
+  - component: {fileID: 5220980513405516538}
   m_Layer: 0
   m_Name: EnemyRed
   m_TagString: Enemy
@@ -218,3 +219,24 @@ CircleCollider2D:
   m_Offset: {x: 0.0011385679, y: -0.023909152}
   serializedVersion: 2
   m_Radius: 0.19031948
+--- !u!50 &5220980513405516538
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6134796338867520013}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
