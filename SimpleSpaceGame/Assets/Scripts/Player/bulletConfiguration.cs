@@ -11,7 +11,7 @@ public class bulletConfiguration : MonoBehaviour
 {
 
     [SerializeField] float projectileSpeed = 9f;
-    float rotationSpeed = 25f;
+    [SerializeField] float rotationSpeed = 25f;
     float timeBeforeDestroyed = 2.0f; //for coroutine (not using this for now)
 
     GameObject bullet;

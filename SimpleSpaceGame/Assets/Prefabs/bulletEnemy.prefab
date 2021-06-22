@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8970524165812998105}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.66, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -75,8 +75,8 @@ SpriteRenderer:
   m_SortingLayerID: -22395991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5b990a35ac9af7948aa63395e7af43fb, type: 3}
-  m_Color: {r: 0.6037736, g: 0.05980776, b: 0.14770932, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 84210173aa46e60458362609b783e65e, type: 3}
+  m_Color: {r: 0.6415094, g: 0.4750801, b: 0.4750801, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: -8
+  rotationSpeed: 0
   standardFireSound: {fileID: 8300000, guid: 08f84358588cbe64e99a82106218fc0c, type: 3}
 --- !u!114 &4906639078348269384
 MonoBehaviour:
@@ -126,9 +127,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022770166, y: -0.002276957}
+  m_Offset: {x: 0.00051573664, y: -0.004271746}
   serializedVersion: 2
-  m_Radius: 0.1401121
+  m_Radius: 0.064308874
 --- !u!50 &4397131382732073753
 Rigidbody2D:
   serializedVersion: 4
