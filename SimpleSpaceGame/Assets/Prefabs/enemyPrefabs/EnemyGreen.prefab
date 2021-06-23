@@ -176,6 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   deathSound: {fileID: 8300000, guid: e5b343a57066ca6419e16a81beef9cca, type: 3}
+  deathVFX: {fileID: 1150152282819779307, guid: df39c2d430780eb46ab1df0dc09a8ba2, type: 3}
 --- !u!114 &-2158175808874703945
 MonoBehaviour:
   m_ObjectHideFlags: 0

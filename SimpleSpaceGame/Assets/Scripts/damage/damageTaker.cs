@@ -10,6 +10,8 @@ public class damageTaker : MonoBehaviour
     [SerializeField] private AudioClip deathSound;
     private float deathSoundVolume = 0.1f;
 
+    [SerializeField] private GameObject deathVFX;
+
 
     private void Update()
     {
@@ -20,6 +22,7 @@ public class damageTaker : MonoBehaviour
     private void destroyItself()
     {
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

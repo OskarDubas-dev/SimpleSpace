@@ -79,6 +79,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1
   deathSound: {fileID: 8300000, guid: 0ebaf943c13d19a40a04d5df65dbd84e, type: 3}
+  deathVFX: {fileID: 1219251501712106339, guid: 20f5102f2c963e544988d344208c444d, type: 3}
 --- !u!1 &1198096349376599075
 GameObject:
   m_ObjectHideFlags: 0

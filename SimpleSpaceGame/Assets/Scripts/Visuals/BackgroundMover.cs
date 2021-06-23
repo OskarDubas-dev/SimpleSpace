@@ -15,7 +15,9 @@ public class BackgroundMover : MonoBehaviour
     private void FixedUpdate()
     {
         var movementThisFrame = moveSpeed * Time.deltaTime;
-        transform.position = Vector2.MoveTowards(transform.position, target.transform.position, movementThisFrame);
+
+        if (transform.position.y != target.transform.position.y)
+            transform.position = Vector2.MoveTowards(transform.position, target.transform.position, movementThisFrame);
     }
 
 
