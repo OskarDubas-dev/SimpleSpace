@@ -7,7 +7,8 @@ public class enemySpawner : MonoBehaviour
 {
     [SerializeField] List<waveConfiguration> waveConfigs;
     [SerializeField] int startingWave = 0;
-    [SerializeField] public int timeBetweenWaves;
+    [SerializeField] int delayBefore1stWave = 0;
+    [SerializeField] public float timeBetweenWaves;
     private void Start()
     {
         var currentWave = waveConfigs[startingWave];
@@ -18,7 +19,9 @@ public class enemySpawner : MonoBehaviour
 
     private IEnumerator spawnAllWaves()
     {
-        
+
+        yield return new WaitForSeconds(delayBefore1stWave);
+
         for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
         {
             var currentWave = waveConfigs[waveIndex];

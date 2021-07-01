@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5735139206538820789}
+  - component: {fileID: 2079467304}
   m_Layer: 5
   m_Name: LevelInfoText
   m_TagString: Untagged
@@ -36,6 +37,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -980, y: -1820}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2079467304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141978507591288828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627a48e1c285e414db8f23395b52b44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: Level 1
+  displayForSeconds: 1.8
 --- !u!1 &499874063019509496
 GameObject:
   m_ObjectHideFlags: 0

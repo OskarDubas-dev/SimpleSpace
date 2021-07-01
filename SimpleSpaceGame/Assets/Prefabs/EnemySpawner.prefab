@@ -58,4 +58,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c21275af3357c424ab2cb3f7c47178ce, type: 2}
   - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
   startingWave: 0
+  delayBefore1stWave: 2
   timeBetweenWaves: 1
