@@ -6,7 +6,7 @@ using UnityEngine;
 public class damageTaker : MonoBehaviour
 {
     [SerializeField] int health = 1;
-    [SerializeField] int lives = 3;
+    
 
     [SerializeField] private AudioClip deathSound;
     private float deathSoundVolume = 0.1f;
@@ -54,7 +54,7 @@ public class damageTaker : MonoBehaviour
     private void playerDeath()
     {
 
-        lives--;
+        
 
         AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
