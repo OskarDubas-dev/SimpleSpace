@@ -11,5 +11,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: dfff14ca32dbd4c44a2a8e3b9dcca417
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: d74a0bd85f0893a488b56b243a41d736
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: aaff0239051327640b83eb812049f696, type: 2}

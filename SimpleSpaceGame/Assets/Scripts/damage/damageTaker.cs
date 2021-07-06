@@ -6,11 +6,15 @@ using UnityEngine;
 public class damageTaker : MonoBehaviour
 {
     [SerializeField] int health = 1;
+    [SerializeField] int lives = 3;
 
     [SerializeField] private AudioClip deathSound;
     private float deathSoundVolume = 0.1f;
 
     [SerializeField] private GameObject deathVFX;
+
+   
+
 
 
     private void Update()
@@ -21,9 +25,8 @@ public class damageTaker : MonoBehaviour
 
     private void destroyItself()
     {
-        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
-        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
-        Destroy(gameObject);
+        if (gameObject.tag == "Player") playerDeath();
+        else if (gameObject.tag == "Enemy") enemyDeath();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,6 +42,29 @@ public class damageTaker : MonoBehaviour
         }
        
     }
+
+
+    private void enemyDeath()
+    {
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+    private void playerDeath()
+    {
+
+        lives--;
+
+        AudioSource.PlayClipAtPoint(deathSound, Camera.main.transform.position, deathSoundVolume);
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        // Destroy(gameObject);
+
+        FindObjectOfType<LevelManager>().deathScreen();
+        Destroy(gameObject);
+    }
+
+   
 
 
 }

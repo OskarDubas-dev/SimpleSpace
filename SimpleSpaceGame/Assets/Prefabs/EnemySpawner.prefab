@@ -44,19 +44,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveConfigs:
+  - {fileID: 11400000, guid: 67c0e885eb9696e4ba63c2c0b8b191b6, type: 2}
   - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
-  - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
-  - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
   - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
-  - {fileID: 11400000, guid: 3fb31588d1258174b80895e61924dc66, type: 2}
+  - {fileID: 11400000, guid: bb10e34d7d7f37f44ae85d9dc5a00ba8, type: 2}
   - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
-  - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
-  - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
+  - {fileID: 11400000, guid: 67c0e885eb9696e4ba63c2c0b8b191b6, type: 2}
   - {fileID: 11400000, guid: c21275af3357c424ab2cb3f7c47178ce, type: 2}
-  - {fileID: 11400000, guid: 3fb31588d1258174b80895e61924dc66, type: 2}
-  - {fileID: 11400000, guid: 48f0c57c8828df44190bac28981a7a1c, type: 2}
+  - {fileID: 11400000, guid: 15ceebed4032b0c47bbc129ef39a303e, type: 2}
+  - {fileID: 11400000, guid: bb10e34d7d7f37f44ae85d9dc5a00ba8, type: 2}
   - {fileID: 11400000, guid: c21275af3357c424ab2cb3f7c47178ce, type: 2}
-  - {fileID: 11400000, guid: 53e71fb0f5335724d9043dbc1cc3225d, type: 2}
+  - {fileID: 11400000, guid: 406be4c4626cfff4b95b2f1de6a919fc, type: 2}
+  - {fileID: 11400000, guid: 74b5d28bd7e83564994482fdc2ff61ca, type: 2}
+  - {fileID: 11400000, guid: bb10e34d7d7f37f44ae85d9dc5a00ba8, type: 2}
+  - {fileID: 11400000, guid: 3d172f95a2052454d86ee15d22b4d1b6, type: 2}
+  - {fileID: 11400000, guid: 3d172f95a2052454d86ee15d22b4d1b6, type: 2}
   startingWave: 0
   delayBefore1stWave: 2
-  timeBetweenWaves: 1
+  timeBetweenWaves: 1.3
