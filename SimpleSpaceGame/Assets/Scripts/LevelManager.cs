@@ -7,7 +7,11 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private float screenDelay = 2.1f;
     [SerializeField] private GameObject playerPrefab;
-    
+
+    void Awake()
+    {
+        setUpSingleton();
+    }
 
     public void loadStartMenu()
     {
@@ -61,6 +65,18 @@ public class LevelManager : MonoBehaviour
     {
         GameObject player = Instantiate(playerPrefab, transform.position, transform.rotation) as GameObject;
     }
-   
+
+    private void setUpSingleton()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
 
 }

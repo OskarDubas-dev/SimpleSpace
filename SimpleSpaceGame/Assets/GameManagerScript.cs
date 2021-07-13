@@ -20,6 +20,7 @@ public class GameManagerScript : MonoBehaviour
         {
             DontDestroyOnLoad(gameObject);
         }
+       
     }
 
 

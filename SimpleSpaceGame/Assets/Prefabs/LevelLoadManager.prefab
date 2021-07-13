@@ -43,4 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8fa345a33b06784baa7e616295ffe4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathScreenDelay: 2.1
+  screenDelay: 2.1
+  playerPrefab: {fileID: 1198096349224323536, guid: 87e9d0e1d5bbd154c8cf160310af7e5d, type: 3}
