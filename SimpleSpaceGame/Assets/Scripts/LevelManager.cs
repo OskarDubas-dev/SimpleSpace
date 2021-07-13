@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] private float screenDelay = 2.1f;
+    [SerializeField] private GameObject playerPrefab;
     
 
     public void loadStartMenu()
@@ -16,24 +17,26 @@ public class LevelManager : MonoBehaviour
     public void loadGame(string levelname)
     {
         SceneManager.LoadScene(levelname);
+        loadPlayer();
+
     }
 
     public void loadGameWithDelay(string levelname)
     {
-        StartCoroutine(delayScreenLoad(levelname));
+        StartCoroutine(delayScreenLoad(levelname, true));
     }
 
 
 
     public void deathScreen()
     {
-        StartCoroutine(delayScreenLoad("DeathScreen"));
+        StartCoroutine(delayScreenLoad("DeathScreen", false));
       
     }
 
     public void gameOverScreen()
     {
-        StartCoroutine(delayScreenLoad("GameOver"));
+        StartCoroutine(delayScreenLoad("GameOver", false));
        
         
        
@@ -45,12 +48,19 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    IEnumerator delayScreenLoad(string levelname)
+    IEnumerator delayScreenLoad(string levelname, bool loadplayer)
     {
         yield return new WaitForSeconds(screenDelay);
         SceneManager.LoadScene(levelname);
+        
+        if(loadplayer)
+        loadPlayer();
     }
 
+    private void loadPlayer()
+    {
+        GameObject player = Instantiate(playerPrefab, transform.position, transform.rotation) as GameObject;
+    }
    
 
 }

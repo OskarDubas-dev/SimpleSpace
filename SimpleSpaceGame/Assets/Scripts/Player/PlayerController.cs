@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        
         playerSprite = GetComponentInChildren<SpriteRenderer>();
         SetUpMoveBoundries();
              
