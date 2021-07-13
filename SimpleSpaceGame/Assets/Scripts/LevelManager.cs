@@ -5,27 +5,37 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField] private float deathScreenDelay = 2.1f;
+    [SerializeField] private float screenDelay = 2.1f;
+    
 
     public void loadStartMenu()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void loadGame()
+    public void loadGame(string levelname)
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(levelname);
     }
+
+    public void loadGameWithDelay(string levelname)
+    {
+        StartCoroutine(delayScreenLoad(levelname));
+    }
+
+
 
     public void deathScreen()
     {
-        StartCoroutine("delayDeathScreenLoad");
+        StartCoroutine(delayScreenLoad("DeathScreen"));
       
     }
 
     public void gameOverScreen()
     {
-        StartCoroutine("delayGameOverLoad");
+        StartCoroutine(delayScreenLoad("GameOver"));
+       
+        
        
     }
 
@@ -35,17 +45,12 @@ public class LevelManager : MonoBehaviour
     }
 
 
-    IEnumerator delayDeathScreenLoad()
+    IEnumerator delayScreenLoad(string levelname)
     {
-        yield return new WaitForSeconds(deathScreenDelay);
-        SceneManager.LoadScene("DeathScreen");
+        yield return new WaitForSeconds(screenDelay);
+        SceneManager.LoadScene(levelname);
     }
 
-    IEnumerator delayGameOverLoad()
-    {
-        yield return new WaitForSeconds(deathScreenDelay);
-        SceneManager.LoadScene("GameOver");
-    }
-
+   
 
 }

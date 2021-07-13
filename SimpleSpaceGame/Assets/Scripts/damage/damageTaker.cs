@@ -60,6 +60,7 @@ public class damageTaker : MonoBehaviour
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         // Destroy(gameObject);
 
+        playerLifeController.playerLives--;
         FindObjectOfType<LevelManager>().deathScreen();
         Destroy(gameObject);
     }

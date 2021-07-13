@@ -1,45 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
-
-[SerializeField] public class PlayerDeathEvent : UnityEvent { }
 
 
 
 public class playerLifeController : MonoBehaviour
 {
-    [SerializeField] int playerLives = 3;
+    [SerializeField] public static int playerLives = 3;
+    [SerializeField] public static string currentLevelName;
+
+    private int defaultLives = 3;
 
     bool playerisAlive = true;
 
-    //[SerializeField] GameObject player;
-
-    public PlayerDeathEvent playerDeathEvent;
-
+   
 
     void Awake()
     {
-
+        
+       
+        currentLevelName = "Level1";
     }
 
    void Update()
     {
-        if(GameObject.Find("Player") == null)
-        {
-            playerisAlive = false;
-            onPlayerDeath();
-        }
+        //if(GameObject.Find("Player") == null)
+        //{
+        //    playerisAlive = false;
+        //    onPlayerDeath();
+        //}
+
+       
     }
 
-    private void onEnable()
-    {
-        
-    }
+    
 
-    private void onPlayerDeath()
+   
+
+    public void resetLife()
     {
-        playerDeathEvent.Invoke();
+        playerLives = defaultLives;
     }
 }

@@ -427,9 +427,17 @@ PrefabInstance:
       value: -136.4
       objectReference: {fileID: 0}
     - target: {fileID: 1352825142, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1352825142, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1583733310}
+    - target: {fileID: 1352825142, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 1373953280, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
       propertyPath: m_fontSize
       value: 50
