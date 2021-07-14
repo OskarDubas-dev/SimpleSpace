@@ -14,10 +14,17 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    //public void loadGame(string levelname)
+    //{
+    //    SceneManager.LoadScene(levelname);
+    //    loadPlayer();
+
+    //}
+
     public void loadGame(string levelname)
     {
-        SceneManager.LoadScene(levelname);
-        loadPlayer();
+        StartCoroutine(LoadYourAsyncScene(levelname));
+        
 
     }
 
@@ -60,7 +67,29 @@ public class LevelManager : MonoBehaviour
     private void loadPlayer()
     {
         GameObject player = Instantiate(playerPrefab, transform.position, transform.rotation) as GameObject;
+        Debug.Log("player");
     }
-   
+
+    IEnumerator LoadYourAsyncScene(string levelname)
+    {
+        // The Application loads the Scene in the background as the current Scene runs.
+        // This is particularly good for creating loading screens.
+        // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
+        // a sceneBuildIndex of 1 as shown in Build Settings.
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelname);
+        
+        // Wait until the asynchronous scene fully loads
+        while (!asyncLoad.isDone)
+        {
+            
+            yield return null;
+        }
+
+        // Instantiate Player when scene is loaded
+        if(asyncLoad.isDone) loadPlayer();
+
+    }
+
 
 }
