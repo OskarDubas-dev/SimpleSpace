@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManagerScript : MonoBehaviour
 {
+    int score = 0;
   
     void Awake()
     {
@@ -22,5 +23,20 @@ public class GameManagerScript : MonoBehaviour
         }
     }
 
+    public void resetGame()
+    {
+        Destroy(gameObject);
+    }
+
+
+    public int getScore()
+    {
+        return score;
+    }
+
+    public void addToScore(int scoreValue)
+    {
+        score += scoreValue;
+    }
 
 }

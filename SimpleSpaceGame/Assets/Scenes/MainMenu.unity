@@ -190,7 +190,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 937459248, guid: 77844432e34ee7e44a6f35e62bfcee97, type: 3}
   m_PrefabInstance: {fileID: 993933901}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 993933902}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8fa345a33b06784baa7e616295ffe4d, type: 3}
@@ -203,6 +203,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 496771669, guid: 77844432e34ee7e44a6f35e62bfcee97, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2984891409956125420, guid: 77844432e34ee7e44a6f35e62bfcee97, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -253,6 +257,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77844432e34ee7e44a6f35e62bfcee97, type: 3}
+--- !u!1 &993933902 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2984891409956125420, guid: 77844432e34ee7e44a6f35e62bfcee97, type: 3}
+  m_PrefabInstance: {fileID: 993933901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &993933903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993933902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50287103b28f373498d029d40c4e521c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1436544298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -729,6 +750,12 @@ PrefabInstance:
     - target: {fileID: 5093532260884065750, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
       propertyPath: m_ReferenceResolution.y
       value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995833335840855006, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
+      propertyPath: m_text
+      value: 'Galaxy
+
+        Defender'
       objectReference: {fileID: 0}
     - target: {fileID: 8995833335840855006, guid: 839340629dcb32c4dab55145d19e589d, type: 3}
       propertyPath: m_fontSize

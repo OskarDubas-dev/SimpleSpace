@@ -30,6 +30,7 @@ public class LevelManager : MonoBehaviour
 
     public void loadGameWithDelay(string levelname)
     {
+        //TODO this is wrong, above is correct
         StartCoroutine(delayScreenLoad(levelname, true));
     }
 
@@ -67,7 +68,7 @@ public class LevelManager : MonoBehaviour
     private void loadPlayer()
     {
         GameObject player = Instantiate(playerPrefab, transform.position, transform.rotation) as GameObject;
-        Debug.Log("player");
+        
     }
 
     IEnumerator LoadYourAsyncScene(string levelname)
